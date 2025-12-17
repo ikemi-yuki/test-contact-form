@@ -7,7 +7,7 @@
 @section('content')
     <div class="contact-form__content">
         <div class="contact-form__header">
-            <h2 class="contact-form__header-item">Contact</h2>
+            <h2 class="contact-form__header-title">Contact</h2>
         </div>
         <form class="form" action="/confirm" method="post">
             @csrf
@@ -22,8 +22,8 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input">
-                        <input class="form__input-name" type="text" name="first_name" placeholder="例:山田" value="{{ old('first_name') }}">
-                        <input class="form__input-name" type="text" name="last_name" placeholder="例:太郎" value="{{ old('last_name') }}">
+                        <input class="form__input-name" type="text" name="last_name" placeholder="例:山田" value="{{ old('last_name') }}">
+                        <input class="form__input-name" type="text" name="first_name" placeholder="例:太郎" value="{{ old('first_name') }}">
                     </div>
                     <div class="form__error">
                     </div>

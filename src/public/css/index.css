@@ -9,11 +9,10 @@
     margin: 50px auto;
 }
 
-.contact-form__header-item {
+.contact-form__header-title {
     font-family: "Lora", serif;
     font-size: 30px;
     font-weight: lighter;
-    
 }
 
 .form {
@@ -191,7 +190,7 @@
     border: none;
     color: #fff;
     font-size: 18px;
-    border-radius: 3px;
+    border-radius: 2px;
     padding: 5px;
     cursor: pointer;
 }
