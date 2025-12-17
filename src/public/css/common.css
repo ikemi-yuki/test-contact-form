@@ -1,0 +1,43 @@
+.header {
+    background: #fff;
+    border-bottom: 1px solid #c3a9a2;
+}
+
+.header__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    text-decoration: none;
+    font-family: "Lora", serif;
+    font-size: 40px;
+    color: #76554c;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav__item {
+    margin-left: 10px;
+}
+
+.header-nav__button {
+    padding: 5px 10px;
+    border: 1px solid #c3a9a2;
+    border-radius: 2px;
+    background: #f0f0f0;
+    color: #c3a9a2;
+    font-size: 16px;
+    cursor: pointer;
+}
