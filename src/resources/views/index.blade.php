@@ -152,7 +152,7 @@
                         <select class="form__select-content" name="category_id">
                             <option value="">選択してください</option>
                             @foreach($categories as $category)
-                                <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
+                                <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
                             @endforeach
                         </select>
                     </div>

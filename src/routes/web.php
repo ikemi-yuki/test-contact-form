@@ -22,3 +22,5 @@ Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::get('/thanks', [ContactController::class, 'store']);
 
 Route::get('/admin', [AdminController::class, 'index']);
+
+Route::get('/confirm', [ContactController::class, 'confirm']);

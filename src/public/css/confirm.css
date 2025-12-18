@@ -6,7 +6,7 @@
 }
 
 .confirm__header {
-    margin: 50px auto;
+    margin: 30px auto;
 }
 
 .confirm__header-title {
@@ -16,19 +16,18 @@
 }
 
 .confirm-table {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
-    font-size: 18px;
 }
 
 .confirm-table__inner {
     width: 100%;
-    border: 1px solid #c3a9a2;
+    border: 1px solid #dbcbc7;
     text-align: left;
 }
 
 .confirm-table__row {
-    border-bottom: 1px solid #c3a9a2;
+    border-bottom: 1px solid #dbcbc7;
 }
 
 .confirm-table__row:last-child {
@@ -38,8 +37,8 @@
 .confirm-table__header {
     width: 30%;
     background: #c3b1ac;
-    border-right: 1px solid #c3a9a2;
-    padding: 20px 60px;
+    border-right: 1px solid #dbcbc7;
+    padding: 5px 50px;
     color: #fff;
 }
 
@@ -55,22 +54,20 @@
 .confirm-table__item-building,
 .confirm-table__item-category {
     width: 100%;
-    height: 50px;
+    height: 30px;
     border: none;
     outline: none;
-    padding: 10px 40px;
+    padding: 5px 40px;
     color: #76554c;
-    font-size: 18px;
 }
 
 .confirm-table__item-detail {
     width: 100%;
-    height: 120px;
+    height: 80px;
     border: none;
     outline: none;
-    padding: 10px 40px;
+    padding: 5px 40px;
     color: #76554c;
-    font-size: 18px;
     resize: none;
     white-space: normal;
     word-break: break-word;
@@ -81,7 +78,7 @@
     justify-content: space-between;
     align-items: center;
     width: 20%;
-    margin: 50px auto;
+    margin: 30px auto;
 }
 
 .confirm__form {
@@ -90,7 +87,7 @@
 
 .confirm__button-send {
     width: 100%;
-    height: 50px;
+    height: 40px;
     background: #896e67;
     border: none;
     color: #fff;
@@ -102,7 +99,7 @@
 
 .confirm__button-edit {
     width: 100%;
-    height: 50px;
+    height: 40px;
     background: transparent;
     border: none;
     text-decoration: underline #76554c solid 1px;
