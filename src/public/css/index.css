@@ -140,14 +140,14 @@
     margin: 0 2.5%;
 }
 
-.form__select-content {
+.form__select {
     position: relative;
     width: 70%;
     margin-bottom: 30px;
     text-align: left;
 }
 
-.form__select {
+.form__select-content {
     width: 50%;
     height: 40px;
     padding: 10px;
@@ -158,7 +158,7 @@
     appearance: none;
 }
 
-.form__select-content::after {
+.form__select::after {
     content: "▼";
     position: absolute;
     top: 50%;

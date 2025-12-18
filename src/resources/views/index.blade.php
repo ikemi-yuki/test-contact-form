@@ -127,8 +127,8 @@
                         ※
                     </span>
                 </div>
-                <div class="form__select-content">
-                    <select class="form__select" name="category_id">
+                <div class="form__select">
+                    <select class="form__select-content" name="category_id">
                         <option value="">選択してください</option>
                         <option value=""></option>
                     </select>
