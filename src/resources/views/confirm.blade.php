@@ -32,7 +32,7 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">電話番号</th>
                     <td class="confirm-table__item">
-                        <p class="confirm-table__item-tel">{{ $contact['tel'] }}</p>
+                        <p class="confirm-table__item-tel">{{ $contact['tel1'] }}{{ $contact['tel2'] }}{{ $contact['tel3'] }}</p>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
@@ -68,7 +68,9 @@
                 <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}">
                 <input type="hidden" name="gender" value="{{ $contact['gender'] }}">
                 <input type="hidden" name="email" value="{{ $contact['email'] }}">
-                <input type="hidden" name="tel" value="{{ $contact['tel'] }}">
+                <input type="hidden" name="tel1" value="{{ $contact['tel1'] }}">
+                <input type="hidden" name="tel2" value="{{ $contact['tel2'] }}">
+                <input type="hidden" name="tel3" value="{{ $contact['tel3'] }}">
                 <input type="hidden" name="address" value="{{ $contact['address'] }}">
                 <input type="hidden" name="building" value="{{ $contact['building'] }}">
                 <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}">
@@ -81,7 +83,9 @@
                 <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}">
                 <input type="hidden" name="gender" value="{{ $contact['gender'] }}">
                 <input type="hidden" name="email" value="{{ $contact['email'] }}">
-                <input type="hidden" name="tel" value="{{ $contact['tel'] }}">
+                <input type="hidden" name="tel1" value="{{ $contact['tel1'] }}">
+                <input type="hidden" name="tel2" value="{{ $contact['tel2'] }}">
+                <input type="hidden" name="tel3" value="{{ $contact['tel3'] }}">
                 <input type="hidden" name="address" value="{{ $contact['address'] }}">
                 <input type="hidden" name="building" value="{{ $contact['building'] }}">
                 <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}">
