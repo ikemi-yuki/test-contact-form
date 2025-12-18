@@ -1,0 +1,286 @@
+.admin__content {
+    max-width: 1230px;
+    margin: 0 auto;
+    text-align: center;
+    color: #76554c;
+}
+
+.admin__header {
+    margin-top: 40px;
+}
+
+.admin__header-title {
+    font-family: "Lora", serif;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.search-form {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.search-form__item {
+    width: 80%;
+    display: flex;
+}
+
+.search-form__item-keyword {
+    width: 45%;
+    height: 40px;
+    margin-right: 20px;
+    padding: 10px 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+.search-form__item-gender {
+    width: 15%;
+    height: 40px;
+    margin-right: 20px;
+    padding: 10px 15px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+.search-form__item-category {
+    width: 25%;
+    height: 40px;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+.search-form__item-date {
+    width: 15%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+.search-form__button {
+    width: 10%;
+    margin-left: 20px;
+}
+
+.search-form__button-submit {
+    width: 100%;
+    height: 40px;
+    background: #896e67;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 2px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.search-form__button-reset {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    height: 40px;
+    background: #c7b89e;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 2px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.contact-table {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.contact-table__inner {
+    width: 100%;
+    border: 1px solid #c3a9a2;
+    text-align: left;
+}
+
+.contact-table__row {
+    border-bottom: 1px solid #c3a9a2;
+}
+
+.contact-table__row:last-child {
+    border-bottom-width: 0;
+}
+
+.contact-table__row:hover {
+    background: #f1ece4;
+}
+
+.contact-table__header-name {
+    width: 20%;
+    background: #847458;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+.contact-table__header-gender {
+    width: 15%;
+    background: #847458;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+.contact-table__header-email {
+    width: 25%;
+    background: #847458;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+.contact-table__header-category {
+    width: 30%;
+    background: #847458;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+.contact-table__header-detail {
+    width: 10%;
+    background: #847458;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+.contact-table__item-name {
+    width: 20%;
+    padding: 20px 30px;
+}
+
+.contact-table__item-gender {
+    width: 15%;
+    padding: 20px 30px;
+}
+
+.contact-table__item-email {
+    width: 25%;
+    padding: 20px 30px;
+}
+
+.contact-table__item-category {
+    width: 30%;
+    padding: 20px 30px;
+}
+
+.contact-table__item-detail {
+    width: 10%;
+    padding: 20px 30px;
+}
+
+.detail__button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 70px;
+    height: 30px;
+    background: #f2f2f2;
+    color: #c3a9a2;
+    border: 1px solid #c3a9a2;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+}
+
+.modal:target {
+    display: block;
+}
+
+.modal__inner {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__content {
+    position: relative;
+    width: 35%;
+    margin: 100px auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.modal__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    width: 35px;
+    height: 35px;
+    border: 1px solid #847458;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    text-decoration: none;
+    color: #847458;
+}
+
+.modal-table {
+    width: 80%;
+    margin: 60px auto;
+}
+
+.modal-table__inner {
+    width: 100%;
+    text-align: left;
+}
+
+.modal-table__header {
+    width: 35%;
+    padding: 15px 10px;
+}
+
+.modal-table__item {
+    width: 65%;
+    padding: 15px 10px;
+}
+
+.modal-table__header-text {
+    width: 35%;
+    height: 100px;
+    padding: 15px 10px;
+    vertical-align: top;
+}
+
+.modal-table__item-text {
+    width: 65%;
+    height: 120px;
+    padding: 15px 10px;
+    vertical-align: top;
+}
+
+.delete-form__button {
+    width: 10%;
+    margin: 30px auto;
+}
+
+.delete-form__button-submit {
+    width: 100%;
+    height: 40px;
+    background: #bb0e0c;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
+    padding: 5px;
+    cursor: pointer;
+}
