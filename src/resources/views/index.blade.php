@@ -26,6 +26,14 @@
                         <input class="form__input-name" type="text" name="first_name" placeholder="例:太郎" value="{{ old('first_name') }}">
                     </div>
                     <div class="form__error">
+                        @error('last_name')
+                            {{ $message }}
+                        @enderror
+                    </div>
+                    <div class="form__error">
+                        @error('first_name')
+                            {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -41,7 +49,7 @@
                 <div class="form__group-content">
                     <div class="form__input">
                         <label class="form__radio-item">
-                            <input class="form__input-gender" type="radio" name="gender" value="1" checked>
+                            <input class="form__input-gender" type="radio" name="gender" value="1">
                             <span class="form__radio-text">男性</span>
                         </label>
                         <label class="form__radio-item">
@@ -54,6 +62,9 @@
                         </label>
                     </div>
                     <div class="form__error">
+                        @error('gender')
+                            {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -69,6 +80,9 @@
                 <div class="form__group-content">
                     <input class="form__input-email" type="email" name="email" placeholder="例:test@example.com" value="{{ old('email') }}">
                     <div class="form__error">
+                        @error('email')
+                            {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -90,6 +104,9 @@
                         <input class="form__input-tel" type="tel" name="tel3" placeholder="5678" value="{{ old('tel3') }}">
                     </div>
                     <div class="form__error">
+                        @if ($errors->has('tel1') || $errors->has('tel2') || $errors->has('tel3'))
+                            {{ $errors->first('tel1')?: $errors->first('tel2')?: $errors->first('tel3') }}
+                        @endif
                     </div>
                 </div>
             </div>
@@ -105,6 +122,9 @@
                 <div class="form__group-content">
                     <input class="form__input-address" type="text" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}">
                     <div class="form__error">
+                        @error('address')
+                            {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -128,11 +148,18 @@
                     </span>
                 </div>
                 <div class="form__select">
-                    <select class="form__select-content" name="category_id">
-                        <option value="">選択してください</option>
-                        <option value=""></option>
-                    </select>
+                    <div class="form__select-wrapper">
+                        <select class="form__select-content" name="category_id">
+                            <option value="">選択してください</option>
+                            @foreach($categories as $category)
+                                <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="form__error">
+                        @error('category_id')
+                            {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -146,8 +173,11 @@
                     </span>
                 </div>
                 <div class="form__group-content">
-                    <textarea class="form__text-detail" name="detail" placeholder="お問い合わせ内容をご記載ください"></textarea>
+                    <textarea class="form__text-detail" name="detail" placeholder="お問い合わせ内容をご記載ください" >{{ old('detail') }}</textarea>
                     <div class="form__error">
+                        @error('detail')
+                            {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>

@@ -57,9 +57,9 @@
 .search-form__select--gender::after {
     content: "▼";
     position: absolute;
-    top: 45%;
-    right: 15%;
-    transform: translateY(-45%);
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
     color: rgba(118, 85, 76, 0.4);
     font-size: 15px;
 }
@@ -84,9 +84,9 @@
 .search-form__select--category::after {
     content: "▼";
     position: absolute;
-    top: 45%;
-    right: 5%;
-    transform: translateY(-45%);
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
     color: rgba(118, 85, 76, 0.4);
     font-size: 15px;
 }
@@ -111,7 +111,7 @@
     content: "▼";
     position: absolute;
     top: 50%;
-    right: 5%;
+    right: 10px;
     transform: translateY(-50%);
     color: rgba(118, 85, 76, 0.4);
     font-size: 15px;
