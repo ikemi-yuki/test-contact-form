@@ -31,7 +31,7 @@
                         @endforeach
                     </select>
                 </div>
-                <input class="search-form__item-date" type="date" name="date" value="{{ old('date') }}">
+                <input class="search-form__item-date" type="date" name="date" value="">
             </div>
             <div class="search-form__button">
                 <button class="search-form__button-submit" type="submit">検索</button>
@@ -40,7 +40,7 @@
                 <a class="search-form__button-reset" href="/reset">リセット</a>
             </div>
         </form>
-
+        {{ $contacts->links() }}
         <div class="contact-table">
             <table class="contact-table__inner">
                 <tr class="contact-table__row">

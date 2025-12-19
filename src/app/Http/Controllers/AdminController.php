@@ -9,7 +9,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::with('category')->get();
+        $contacts = Contact::with('category')->paginate(7);
         $categories = Category::all();
 
         return view('admin', compact('contacts','categories'));
@@ -25,10 +25,12 @@ class AdminController extends Controller
     public function search(Request $request)
     {
         $contacts = Contact::with('category')
-                    ->CategorySearch($request->category_id)
-                    ->GenderSearch($request->gender)
-                    ->DateSearch($request->date)
-                    ->KeywordSearch($request->keyword)->get();
+                    ->categorySearch($request->category_id)
+                    ->genderSearch($request->gender)
+                    ->dateSearch($request->date)
+                    ->keywordSearch($request->keyword)
+                    ->paginate(7)
+                    ->withQueryString();
         $categories = Category::all();
 
         return view('admin', compact('contacts','categories'));

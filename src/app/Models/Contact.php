@@ -43,14 +43,17 @@ class Contact extends Model
     public function scopeDateSearch($query, $date)
     {
         if (!empty($date)) {
-            $query->where('created_at', $date);
+            $query->whereBetween('created_at', [
+                $date . ' 00:00:00',
+                $date . ' 23:59:59',
+            ]);
         }
     }
 
     public function scopeKeywordSearch($query, $keyword)
     {
         $keyword = trim($keyword);
-        
+
         if (!empty($keyword)) {
             $query->where(function ($q) use ($keyword) {
                 $q->where('last_name', 'like', '%' . $keyword . '%')
