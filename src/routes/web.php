@@ -28,3 +28,5 @@ Route::get('/admin', [AdminController::class, 'index']);
 Route::delete('/delete', [AdminController::class, 'destroy']);
 
 Route::get('/search', [AdminController::class, 'search']);
+
+Route::get('/reset', [AdminController::class, 'index']);
