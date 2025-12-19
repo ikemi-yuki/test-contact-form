@@ -25,4 +25,6 @@ Route::post('/',[ContactController::class, 'edit']);
 
 Route::get('/admin', [AdminController::class, 'index']);
 
-Route::get('/confirm', [ContactController::class, 'confirm']);
+Route::delete('/delete', [AdminController::class, 'destroy']);
+
+Route::get('/search', [AdminController::class, 'search']);

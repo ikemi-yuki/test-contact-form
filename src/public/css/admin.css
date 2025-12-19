@@ -16,7 +16,7 @@
 }
 
 .search-form {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -151,7 +151,7 @@
 }
 
 .contact-table {
-    width: 80%;
+    width: 90%;
     margin: 50px auto;
 }
 
@@ -262,7 +262,7 @@
 
 .modal__content {
     position: relative;
-    width: 35%;
+    width: 45%;
     margin: 100px auto;
     background: #fff;
     padding: 10px;
