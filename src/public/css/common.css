@@ -22,14 +22,15 @@
     color: #76554c;
 }
 
-.header-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-nav__item {
-    margin-left: 10px;
+.header-nav__link {
+    padding: 2px 10px;
+    border: 1px solid #c3a9a2;
+    border-radius: 2px;
+    background: #f0f0f0;
+    color: #c3a9a2;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .header-nav__button {

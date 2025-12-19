@@ -5,37 +5,43 @@
 @endsection
 
 @section('content')
-    <div class="login-form__content">
-        <div class="login-form__header">
-            <h2 class="login-form__header-title">Login</h2>
+    <div class="login-form">
+        <div class="login-form__content">
+            <div class="login-form__header">
+                <h2 class="login-form__header-title">Login</h2>
+            </div>
+            <form class="form" action="/login" method="post">
+                @csrf
+                <div class="form__group">
+                    <div class="form__group-title">
+                        <span class="form__label--item">メールアドレス</span>
+                    </div>
+                    <div class="form__group-content">
+                        <input class="form__input" type="email" name="email" value="{{ old('email') }}" placeholder="例:text@example.com"/>
+                        <div class="form__error">
+                            @error('email')
+                            {{ $message }}
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <div class="form__group-title">
+                        <span class="form__label--item">パスワード</span>
+                    </div>
+                    <div class="form__group-content">
+                        <input class="form__input" type="password" name="password" placeholder="coachtech1106"/>
+                        <div class="form__error">
+                            @error('password')
+                            {{ $message }}
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="form__button">
+                    <button class="form__button-submit" type="submit">ログイン</button>
+                </div>
+            </form>
         </div>
-        <form class="form" action="/login" method="post">
-            @csrf
-            <div class="form__group">
-                <div class="form__group-title">
-                    <span class="form__label--item">メールアドレス</span>
-                </div>
-                <div class="form__group-content">
-                    <input class="form__input" type="email" name="email" value="{{ old('email') }}" />
-                    <div class="form__error">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="form__group">
-                <div class="form__group-title">
-                    <span class="form__label--item">パスワード</span>
-                </div>
-                <div class="form__group-content">
-                    <input class="form__input" type="password" name="password" />
-                    <div class="form__error">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="form__button">
-                <button class="form__button-submit" type="submit">ログイン</button>
-            </div>
-        </form>
     </div>
 @endsection

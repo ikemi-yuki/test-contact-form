@@ -14,7 +14,7 @@
         <form class="search-form" action="/search" method="get">
             @csrf
             <div class="search-form__item">
-                <input class="search-form__item-keyword" type="text" name="keyword" value="{{ old('keyword') }}" placeholder="名前やメールアドレスを入力してください">
+                <input class="search-form__item-keyword" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください">
                 <div class="search-form__select--gender">
                     <select class="search-form__item-gender" name="gender">
                         <option value="">性別</option>
@@ -31,7 +31,7 @@
                         @endforeach
                     </select>
                 </div>
-                <input class="search-form__item-date" type="date" name="date" value="">
+                <input class="search-form__item-date" type="date" name="date">
             </div>
             <div class="search-form__button">
                 <button class="search-form__button-submit" type="submit">検索</button>

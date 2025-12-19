@@ -23,10 +23,12 @@ Route::post('/thanks', [ContactController::class, 'store']);
 
 Route::post('/',[ContactController::class, 'edit']);
 
-Route::get('/admin', [AdminController::class, 'index']);
+Route::middleware('auth')->group(function (){
+    Route::get('/admin', [AdminController::class, 'index']);
 
-Route::delete('/delete', [AdminController::class, 'destroy']);
+    Route::delete('/delete', [AdminController::class, 'destroy']);
 
-Route::get('/search', [AdminController::class, 'search']);
+    Route::get('/search', [AdminController::class, 'search']);
 
-Route::get('/reset', [AdminController::class, 'index']);
+    Route::get('/reset', [AdminController::class, 'index']);
+});

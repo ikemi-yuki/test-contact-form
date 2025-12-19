@@ -17,27 +17,21 @@
             <div class="header__content">
                 <div class="header__left"></div>
                 <a class="header__logo" href="/">FashionablyLate</a>
-                <nav>
-                    <ul class="header-nav">
-                        <li class="header-nav__item">
-                            <form class="header-nav__form" action="/register" method="post">
-                                @csrf
-                                <button class="header-nav__button">register</button>
-                            </form>
-                        </li>
-                        <li class="header-nav__item">
-                            <form class="header-nav__form" action="/login" method="post">
-                                @csrf
-                                <button class="header-nav__button">login</button>
-                            </form>
-                        </li>
-                        <li class="header-nav__item">
-                            <form class="header-nav__form" action="/logout" method="post">
-                                @csrf
-                                <button class="header-nav__button">logout</button>
-                            </form>
-                        </li>
-                    </ul>
+                <nav class="header-nav">
+                    @auth
+                        <form class="header-nav__form" action="/logout" method="post">
+                            @csrf
+                            <button class="header-nav__button">logout</button>
+                        </form>
+                    @endauth
+                    @guest
+                        @if (request()->routeIs('login'))
+                            <a class="header-nav__link" href="/register">register</a>
+                        @endif
+                        @if (request()->routeIs('register'))
+                            <a class="header-nav__link" href="/login">login</a>
+                        @endif
+                    @endguest
                 </nav>
             </div>
         </div>
