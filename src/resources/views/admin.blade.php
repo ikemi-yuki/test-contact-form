@@ -11,7 +11,7 @@
                 Admin
             </h2>
         </div>
-        <form class="search-form" action="/search" method="get">
+        <form class="search-form" action="{{ route('admin.search') }}" method="get">
             @csrf
             <div class="search-form__item">
                 <input class="search-form__item-keyword" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください">
@@ -37,10 +37,17 @@
                 <button class="search-form__button-submit" type="submit">検索</button>
             </div>
             <div class="search-form__button">
-                <a class="search-form__button-reset" href="/reset">リセット</a>
+                <a class="search-form__button-reset" href="{{ route('admin.reset') }}">リセット</a>
             </div>
         </form>
-        {{ $contacts->links() }}
+        <div class="admin-list">
+            <div class="admin-list__export">
+                <a class="admin-list__export-button" href="{{ route('contacts.export', request()->query()) }}">エクスポート</a>
+            </div>
+            <div class="admin-list__pagination">
+                {{ $contacts->links() }}
+            </div>
+        </div>
         <div class="contact-table">
             <table class="contact-table__inner">
                 <tr class="contact-table__row">
@@ -166,7 +173,7 @@
                                     </tr>
                                 </table>
                             </div>
-                            <form class="delete-form" action="/delete" method="post">
+                            <form class="delete-form" action="{{ route('admin.delete') }}" method="post">
                                 @method('DELETE')
                                 @csrf
                                 <div class="delete-form__button">

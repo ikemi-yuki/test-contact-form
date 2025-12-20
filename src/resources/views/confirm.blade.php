@@ -62,7 +62,7 @@
             </table>
         </div>
         <div class="confirm__buttons">
-            <form class="confirm__form" action="/thanks" method="post">
+            <form class="confirm__form" action="{{ route('contact.thanks') }}" method="post">
                 @csrf
                 <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}">
                 <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}">
@@ -77,7 +77,7 @@
                 <input type="hidden" name="detail" value="{{ $contact['detail'] }}">
                 <button class="confirm__button-send" type="submit">送信</button>
             </form>
-            <form class="confirm__form" action="/" method="post">
+            <form class="confirm__form" action="{{ route('contact.edit') }}" method="post">
                 @csrf
                 <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}">
                 <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}">

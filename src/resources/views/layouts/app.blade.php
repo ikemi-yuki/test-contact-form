@@ -15,21 +15,22 @@
     <header class="header">
         <div class="header__inner">
             <div class="header__content">
-                <div class="header__left"></div>
-                <a class="header__logo" href="/">FashionablyLate</a>
+                <a class="header__logo" href="{{ route('contact.index') }}">FashionablyLate</a>
                 <nav class="header-nav">
                     @auth
-                        <form class="header-nav__form" action="/logout" method="post">
-                            @csrf
-                            <button class="header-nav__button">logout</button>
-                        </form>
+                        @if (request()->routeIs('admin.*'))
+                            <form class="header-nav__form" action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <button class="header-nav__button">logout</button>
+                            </form>
+                        @endif
                     @endauth
                     @guest
                         @if (request()->routeIs('login'))
-                            <a class="header-nav__link" href="/register">register</a>
+                            <a class="header-nav__link" href="{{ route('register') }}">register</a>
                         @endif
                         @if (request()->routeIs('register'))
-                            <a class="header-nav__link" href="/login">login</a>
+                            <a class="header-nav__link" href="{{ route('login') }}">login</a>
                         @endif
                     @endguest
                 </nav>

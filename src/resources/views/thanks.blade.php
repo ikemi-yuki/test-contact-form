@@ -18,7 +18,7 @@
                 お問い合わせありがとうございました
                 </h2>
             </div>
-            <a class="thanks__button" href="/">
+            <a class="thanks__button" href="{{ route('contact.index') }}">
             HOME
             </a>
         </div>

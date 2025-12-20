@@ -21,7 +21,7 @@
 
 .form {
     margin: 60px auto;
-    padding: 70px 120px;
+    padding: 80px 120px;
     width: 50%;
     text-align: center;
     background: #fff;
@@ -57,7 +57,7 @@
 }
 
 .form__button {
-    margin-top: 60px;
+    margin-top: 45px;
 }
 
 .form__button-submit {

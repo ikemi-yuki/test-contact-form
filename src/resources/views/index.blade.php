@@ -9,7 +9,7 @@
         <div class="contact-form__header">
             <h2 class="contact-form__header-title">Contact</h2>
         </div>
-        <form class="form" action="/confirm" method="post">
+        <form class="form" action="{{ route('contact.confirm') }}" method="post" novalidate>
             @csrf
             <div class="form__group">
                 <div class="form__group-title">
@@ -22,18 +22,22 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input">
-                        <input class="form__input-name" type="text" name="last_name" placeholder="例:山田" value="{{ old('last_name') }}">
-                        <input class="form__input-name" type="text" name="first_name" placeholder="例:太郎" value="{{ old('first_name') }}">
-                    </div>
-                    <div class="form__error">
-                        @error('last_name')
-                            {{ $message }}
-                        @enderror
-                    </div>
-                    <div class="form__error">
-                        @error('first_name')
-                            {{ $message }}
-                        @enderror
+                        <div class="form__input-group">
+                            <input class="form__input-name" type="text" name="last_name" placeholder="例:山田" value="{{ old('last_name') }}">
+                            <div class="form__error">
+                                @error('last_name')
+                                    {{ $message }}
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form__input-group">
+                            <input class="form__input-name" type="text" name="first_name" placeholder="例:太郎" value="{{ old('first_name') }}">
+                            <div class="form__error">
+                                @error('first_name')
+                                    {{ $message }}
+                                @enderror
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -48,17 +52,17 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input">
-                        <label class="form__radio-item">
+                        <label class="form__input-item">
                             <input class="form__input-gender" type="radio" name="gender" value="1" {{ old('gender') == 1 ? 'checked' : '' }}>
-                            <span class="form__radio-text">男性</span>
+                            <span class="form__input-text">男性</span>
                         </label>
-                        <label class="form__radio-item">
+                        <label class="form__input-item">
                             <input class="form__input-gender" type="radio" name="gender" value="2" {{ old('gender') == 2 ? 'checked' : '' }}>
-                            <span class="form__radio-text">女性</span>
+                            <span class="form__input-text">女性</span>
                         </label>
-                        <label class="form__radio-item">
+                        <label class="form__input-item">
                             <input class="form__input-gender" type="radio" name="gender" value="3" {{ old('gender') == 3 ? 'checked' : '' }}>
-                            <span class="form__radio-text">その他</span>
+                            <span class="form__input-text">その他</span>
                         </label>
                     </div>
                     <div class="form__error">
@@ -128,7 +132,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form__group">
+            <div class="form__group--not-required">
                 <div class="form__group-title">
                     <span class="form__label--item">
                         建物名
@@ -150,9 +154,9 @@
                 <div class="form__select">
                     <div class="form__select-wrapper">
                         <select class="form__select-content" name="category_id">
-                            <option value="">選択してください</option>
+                            <option class="option-list" value="">選択してください</option>
                             @foreach($categories as $category)
-                                <option value="{{ $category['id'] }}" {{ old('category_id') == $category['id'] ? 'selected' : '' }}>{{ $category['content'] }}</option>
+                                <option class="option-list" value="{{ $category['id'] }}" {{ old('category_id') == $category['id'] ? 'selected' : '' }}>{{ $category['content'] }}</option>
                             @endforeach
                         </select>
                     </div>

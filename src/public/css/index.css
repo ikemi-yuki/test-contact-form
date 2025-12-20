@@ -6,7 +6,7 @@
 }
 
 .contact-form__header {
-    margin: 35px auto;
+    margin: 30px auto;
 }
 
 .contact-form__header-title {
@@ -23,6 +23,13 @@
 .form__group {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.form__group--not-required {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 .form__group-title {
@@ -39,7 +46,6 @@
 
 .form__group-content {
     width: 70%;
-    margin-bottom: 20px;
     text-align: left;
 }
 
@@ -50,12 +56,21 @@
 }
 
 .form__error {
+    height: 20px;
     text-align: left;
     color: #ff0000;
 }
 
-.form__input-name {
+.form__input-group {
     width: 45%;
+}
+
+.form__input-group:first-of-type {
+    margin-right: 10%;
+}
+
+.form__input-name {
+    width: 100%;
     height: 40px;
     padding: 10px;
     border: none;
@@ -64,11 +79,7 @@
     color: #76554c;
 }
 
-.form__input-name:first-of-type {
-    margin-right: 10%;
-}
-
-.form__radio-item {
+.form__input-item {
     margin-right: 60px;
     cursor: pointer;
 }
@@ -77,12 +88,12 @@
     display: none;
 }
 
-.form__radio-text {
+.form__input-text {
     position: relative;
     padding-left: 26px;
 }
 
-.form__radio-text::before {
+.form__input-text::before {
     content: "";
     position: absolute;
     left: 0;
@@ -94,7 +105,7 @@
     transform: translateY(-50%);
 }
 
-.form__radio-text::after {
+.form__input-text::after {
     content: "";
     position: absolute;
     left: 0;
@@ -107,7 +118,7 @@
     opacity: 0;
 }
 
-.form__input-gender:checked + .form__radio-text::after {
+.form__input-gender:checked + .form__input-text::after {
     opacity: 1;
 }
 
@@ -141,13 +152,22 @@
 
 .form__select {
     width: 70%;
-    margin-bottom: 30px;
     text-align: left;
 }
 
 .form__select-wrapper {
     position: relative;
     width: 50%;
+}
+
+.form__select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: rgba(118, 85, 76, 0.4);
+    font-size: 18px;
 }
 
 .form__select-content {
@@ -162,14 +182,8 @@
     appearance: none;
 }
 
-.form__select-wrapper::after {
-    content: "▼";
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    color: rgba(118, 85, 76, 0.4);
-    font-size: 18px;
+.option-list {
+    color: #76554c;
 }
 
 .form__text-detail {
@@ -184,12 +198,12 @@
 
 .form__button {
     width: 20%;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 .form__button-submit {
     width: 100%;
-    height: 50px;
+    height: 45px;
     background: #896e67;
     border: none;
     color: #fff;
