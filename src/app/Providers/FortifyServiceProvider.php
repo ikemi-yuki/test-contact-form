@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 use Laravel\Fortify\Fortify;
 
@@ -42,7 +43,11 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         Fortify::authenticateUsing(function (Request $request) {
-            app(LoginRequest::class)->validateResolved();
+            Validator::make($request->all(),
+            app(LoginRequest::class)->rules(),
+            app(LoginRequest::class)->messages())
+            ->validate();
+
             if (Auth::attempt($request->only('email', 'password'))) {
                 return Auth::user();
             }
