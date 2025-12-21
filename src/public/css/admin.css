@@ -239,28 +239,28 @@ svg.w-5.h-5 {
 .contact-table__header-name {
     width: 20%;
     background: #847458;
-    padding: 10px 30px;
+    padding: 10px 40px;
     color: #fff;
 }
 
 .contact-table__header-gender {
-    width: 5%;
+    width: 10%;
     background: #847458;
-    padding: 10px 30px;
+    padding: 10px 20px;
     color: #fff;
 }
 
 .contact-table__header-email {
-    width: 35%;
+    width: 30%;
     background: #847458;
-    padding: 10px 30px;
+    padding: 10px 20px;
     color: #fff;
 }
 
 .contact-table__header-category {
     width: 30%;
     background: #847458;
-    padding: 10px 30px;
+    padding: 10px 20px;
     color: #fff;
 }
 
@@ -273,22 +273,22 @@ svg.w-5.h-5 {
 
 .contact-table__item-name {
     width: 20%;
-    padding: 20px 30px;
+    padding: 20px 40px;
 }
 
 .contact-table__item-gender {
-    width: 15%;
-    padding: 20px 30px;
+    width: 10%;
+    padding: 20px;
 }
 
 .contact-table__item-email {
-    width: 25%;
-    padding: 20px 30px;
+    width: 30%;
+    padding: 20px;
 }
 
 .contact-table__item-category {
     width: 30%;
-    padding: 20px 30px;
+    padding: 20px;
 }
 
 .contact-table__item-detail {
