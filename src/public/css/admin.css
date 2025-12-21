@@ -180,10 +180,21 @@ nav[role="navigation"] {
     font-size: 12px;
 }
 
-nav[role="navigation"] a,
-span[aria-disabled="true"] {
-    border: 1px solid #ddd;
+nav[role="navigation"] a {
+    border: 1px solid #d1d1d1;
     padding: 4px 8px;
+    background: transparent;
+    text-decoration: none;
+    color: #76554c;
+}
+
+nav[role="navigation"] a.px-2 {
+    padding: 4px;
+}
+
+span[aria-disabled="true"] {
+    border: 1px solid #d1d1d1;
+    padding: 4px;
     background: transparent;
     text-decoration: none;
     color: #76554c;
@@ -192,14 +203,14 @@ span[aria-disabled="true"] {
 span[aria-current="page"] {
     background: #847458;
     color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #d1d1d1;
     padding: 4px 8px;
-    /* border-color: #2563eb; */
 }
 
 svg.w-5.h-5 {
     width: 15px;
     height: 15px;
+    vertical-align: middle;
 }
 
 .contact-table {
@@ -326,7 +337,6 @@ svg.w-5.h-5 {
     position: absolute;
     top: 30px;
     right: 30px;
-
     width: 35px;
     height: 35px;
     border: 1px solid #847458;

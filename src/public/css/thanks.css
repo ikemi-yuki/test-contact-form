@@ -3,6 +3,7 @@
     max-width: 1230px;
     margin: 0 auto;
     text-align: center;
+    z-index: 0;
 }
 
 .thanks__wrapper::before {
@@ -12,7 +13,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    font-size: 17vw;
+    font-size: 15vw;
     white-space: nowrap;
     line-height: 1;
     color: #f2f2f2;
@@ -29,7 +30,7 @@
 }
 
 .thanks__header {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .thanks__header-title {
@@ -39,7 +40,6 @@
 
 .thanks__button {
     display: inline-block;
-    vertical-align: middle;
     text-decoration: none;
     width: 150px;
     height: 50px;
