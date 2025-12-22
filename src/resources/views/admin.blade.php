@@ -1,15 +1,13 @@
 @extends('layouts.app')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 @endsection
 
 @section('content')
     <div class="admin__content">
         <div class="admin__header">
-            <h2 class="admin__header-title">
-                Admin
-            </h2>
+            <h2 class="admin__header-title">Admin</h2>
         </div>
         <form class="search-form" action="{{ route('admin.search') }}" method="get">
             @csrf
@@ -38,12 +36,16 @@
                 <button class="search-form__button-submit" type="submit">検索</button>
             </div>
             <div class="search-form__button">
-                <a class="search-form__button-reset" href="{{ route('admin.reset') }}">リセット</a>
+                <a class="search-form__button-reset" href="{{ route('admin.reset') }}">
+                    リセット
+                </a>
             </div>
         </form>
         <div class="admin-list">
             <div class="admin-list__export">
-                <a class="admin-list__export-button" href="{{ route('contacts.export', request()->query()) }}">エクスポート</a>
+                <a class="admin-list__export-button" href="{{ route('contacts.export', request()->query()) }}">
+                    エクスポート
+                </a>
             </div>
             <div class="admin-list__pagination">
                 {{ $contacts->links() }}
@@ -52,20 +54,11 @@
         <div class="contact-table">
             <table class="contact-table__inner">
                 <tr class="contact-table__row">
-                    <th class="contact-table__header-name">
-                        お名前
-                    </th>
-                    <th class="contact-table__header-gender">
-                        性別
-                    </th>
-                    <th class="contact-table__header-email">
-                        メールアドレス
-                    </th>
-                    <th class="contact-table__header-category">
-                        お問い合わせの種類
-                    </th>
-                    <th class="contact-table__header-detail">
-                    </th>
+                    <th class="contact-table__header-name">お名前</th>
+                    <th class="contact-table__header-gender">性別</th>
+                    <th class="contact-table__header-email">メールアドレス</th>
+                    <th class="contact-table__header-category">お問い合わせの種類</th>
+                    <th class="contact-table__header-detail"></th>
                 </tr>
                 @foreach($contacts as $contact)
                     <tr class="contact-table__row">
@@ -89,7 +82,7 @@
                         </td>
                         <td class="contact-table__item-detail">
                             <a class="detail__button" href="#modal-{{ $contact['id'] }}">
-                            詳細
+                                詳細
                             </a>
                         </td>
                     </tr>
@@ -103,17 +96,13 @@
                             <div class="modal-table">
                                 <table class="modal-table__inner">
                                     <tr class="modal-table__row">
-                                        <th class="modal-table__header">
-                                            お名前
-                                        </th>
+                                        <th class="modal-table__header">お名前</th>
                                         <td class="modal-table__item">
                                             {{ $contact['last_name'] }} {{ $contact['first_name'] }}
                                         </td>
                                     </tr>
                                     <tr class="modal-table__row">
-                                        <th class="modal-table__header">
-                                            性別
-                                        </th>
+                                        <th class="modal-table__header">性別</th>
                                         <td class="modal-table__item">
                                             @if($contact['gender'] === 1)
                                             男性
@@ -125,49 +114,37 @@
                                         </td>
                                     </tr>
                                     <tr class="modal-table__row">
-                                        <th class="modal-table__header">
-                                            メールアドレス
-                                        </th>
+                                        <th class="modal-table__header">メールアドレス</th>
                                         <td class="modal-table__item">
                                             {{ $contact['email'] }}
                                         </td>
                                     </tr>
                                     <tr class="modal-table__row">
-                                        <th class="modal-table__header">
-                                            電話番号
-                                        </th>
+                                        <th class="modal-table__header">電話番号</th>
                                         <td class="modal-table__item">
                                             {{ $contact['tel'] }}
                                         </td>
                                     </tr>
                                     <tr class="modal-table__row">
-                                        <th class="modal-table__header">
-                                            住所
-                                        </th>
+                                        <th class="modal-table__header">住所</th>
                                         <td class="modal-table__item">
                                             {{ $contact['address'] }}
                                         </td>
                                     </tr>
                                     <tr class="modal-table__row">
-                                        <th class="modal-table__header">
-                                            建物名
-                                        </th>
+                                        <th class="modal-table__header">建物名</th>
                                         <td class="modal-table__item">
                                             {{ $contact['building'] }}
                                         </td>
                                     </tr>
                                     <tr class="modal-table__row">
-                                        <th class="modal-table__header">
-                                            お問い合わせの種類
-                                        </th>
+                                        <th class="modal-table__header">お問い合わせの種類</th>
                                         <td class="modal-table__item">
                                             {{ $contact['category']['content'] }}
                                         </td>
                                     </tr>
                                     <tr class="modal-table__row">
-                                        <th class="modal-table__header-text">
-                                            お問い合わせ内容
-                                        </th>
+                                        <th class="modal-table__header-text">お問い合わせ内容</th>
                                         <td class="modal-table__item-text">
                                             {{ $contact['detail'] }}
                                         </td>

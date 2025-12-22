@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
 @endsection
 
 @section('content')
@@ -14,49 +14,65 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お名前</th>
                     <td class="confirm-table__item">
-                        <p class="confirm-table__item-name">{{ $contact['last_name'] }}　{{ $contact['first_name'] }}</p>
+                        <p class="confirm-table__item-name">
+                            {{ $contact['last_name'] }}　{{ $contact['first_name'] }}
+                        </p>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">性別</th>
                     <td class="confirm-table__item">
-                        <p class="confirm-table__item-gender">{{ $genderText[$contact['gender']] }}</p>
+                        <p class="confirm-table__item-gender">
+                            {{ $genderText[$contact['gender']] }}
+                        </p>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">メールアドレス</th>
                     <td class="confirm-table__item">
-                        <p class="confirm-table__item-email">{{ $contact['email'] }}</p>
+                        <p class="confirm-table__item-email">
+                            {{ $contact['email'] }}
+                        </p>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">電話番号</th>
                     <td class="confirm-table__item">
-                        <p class="confirm-table__item-tel">{{ $contact['tel1'] }}{{ $contact['tel2'] }}{{ $contact['tel3'] }}</p>
+                        <p class="confirm-table__item-tel">
+                            {{ $contact['tel1'] }}{{ $contact['tel2'] }}{{ $contact['tel3'] }}
+                        </p>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">住所</th>
                     <td class="confirm-table__item">
-                        <p class="confirm-table__item-address">{{ $contact['address'] }}</p>
+                        <p class="confirm-table__item-address">
+                            {{ $contact['address'] }}
+                        </p>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">建物名</th>
                     <td class="confirm-table__item">
-                        <p class="confirm-table__item-building">{{ $contact['building'] }}</p>
+                        <p class="confirm-table__item-building">
+                            {{ $contact['building'] }}
+                        </p>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お問い合わせの種類</th>
                     <td class="confirm-table__item">
-                        <p class="confirm-table__item-category">{{ $category['content'] }}</p>
+                        <p class="confirm-table__item-category">
+                            {{ $category['content'] }}
+                        </p>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お問い合わせ内容</th>
                     <td class="confirm-table__item">
-                        <p class="confirm-table__item-detail">{{ $contact['detail'] }}</p>
+                        <p class="confirm-table__item-detail">
+                            {{ $contact['detail'] }}
+                        </p>
                     </td>
                 </tr>
             </table>

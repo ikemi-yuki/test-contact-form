@@ -11,6 +11,7 @@ class ContactController extends Controller
     public function index()
     {
         $categories = Category::all();
+
         return view('index', compact('categories'));
     }
 
@@ -23,6 +24,7 @@ class ContactController extends Controller
             3 => 'その他',
         ];
         $category = Category::find($contact['category_id']);
+
         return view('confirm', compact('contact', 'genderText','category'));
     }
 
@@ -32,6 +34,7 @@ class ContactController extends Controller
         $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'address', 'building', 'category_id', 'detail']);
         $contact['tel'] = $tel;
         Contact::create($contact);
+
         return view('thanks');
     }
 

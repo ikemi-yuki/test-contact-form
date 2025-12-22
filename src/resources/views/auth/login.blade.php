@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 @endsection
 
 @section('content')
@@ -17,10 +17,10 @@
                         <span class="form__label--item">メールアドレス</span>
                     </div>
                     <div class="form__group-content">
-                        <input class="form__input" type="email" name="email" value="{{ old('email') }}" placeholder="例:text@example.com"/>
+                        <input class="form__input" type="email" name="email" value="{{ old('email') }}" placeholder="例:text@example.com">
                         <div class="form__error">
                             @error('email')
-                            {{ $message }}
+                                {{ $message }}
                             @enderror
                         </div>
                     </div>
@@ -30,10 +30,10 @@
                         <span class="form__label--item">パスワード</span>
                     </div>
                     <div class="form__group-content">
-                        <input class="form__input" type="password" name="password" placeholder="coachtech1106"/>
+                        <input class="form__input" type="password" name="password" placeholder="coachtech1106">
                         <div class="form__error">
                             @error('password')
-                            {{ $message }}
+                                {{ $message }}
                             @enderror
                         </div>
                     </div>

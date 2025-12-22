@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 @endsection
 
 @section('content')
@@ -13,12 +13,8 @@
             @csrf
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">
-                        お名前
-                    </span>
-                    <span class="form__label--required">
-                        ※
-                    </span>
+                    <span class="form__label--item">お名前</span>
+                    <span class="form__label--required">※</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input">
@@ -43,12 +39,8 @@
             </div>
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">
-                        性別
-                    </span>
-                    <span class="form__label--required">
-                        ※
-                    </span>
+                    <span class="form__label--item">性別</span>
+                    <span class="form__label--required">※</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input">
@@ -74,12 +66,8 @@
             </div>
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">
-                        メールアドレス
-                    </span>
-                    <span class="form__label--required">
-                        ※
-                    </span>
+                    <span class="form__label--item">メールアドレス</span>
+                    <span class="form__label--required">※</span>
                 </div>
                 <div class="form__group-content">
                     <input class="form__input-email" type="email" name="email" placeholder="例:test@example.com" value="{{ old('email') }}">
@@ -92,12 +80,8 @@
             </div>
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">
-                        電話番号
-                    </span>
-                    <span class="form__label--required">
-                        ※
-                    </span>
+                    <span class="form__label--item">電話番号</span>
+                    <span class="form__label--required">※</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input">
@@ -116,12 +100,8 @@
             </div>
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">
-                        住所
-                    </span>
-                    <span class="form__label--required">
-                        ※
-                    </span>
+                    <span class="form__label--item">住所</span>
+                    <span class="form__label--required">※</span>
                 </div>
                 <div class="form__group-content">
                     <input class="form__input-address" type="text" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}">
@@ -134,9 +114,7 @@
             </div>
             <div class="form__group--not-required">
                 <div class="form__group-title">
-                    <span class="form__label--item">
-                        建物名
-                    </span>
+                    <span class="form__label--item">建物名</span>
                 </div>
                 <div class="form__group-content">
                     <input class="form__input-building" type="text" name="building" placeholder="例:千駄ヶ谷マンション101" value="{{ old('building') }}">
@@ -144,19 +122,17 @@
             </div>
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">
-                        お問い合わせの種類
-                    </span>
-                    <span class="form__label--required">
-                        ※
-                    </span>
+                    <span class="form__label--item">お問い合わせの種類</span>
+                    <span class="form__label--required">※</span>
                 </div>
                 <div class="form__select">
                     <div class="form__select-wrapper">
                         <select class="form__select-content" name="category_id">
                             <option class="option-list" value="">選択してください</option>
                             @foreach($categories as $category)
-                                <option class="option-list" value="{{ $category['id'] }}" {{ old('category_id') == $category['id'] ? 'selected' : '' }}>{{ $category['content'] }}</option>
+                                <option class="option-list" value="{{ $category['id'] }}" {{ old('category_id') == $category['id'] ? 'selected' : '' }}>
+                                    {{ $category['content'] }}
+                                </option>
                             @endforeach
                         </select>
                     </div>
@@ -169,15 +145,11 @@
             </div>
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">
-                        お問い合わせ内容
-                    </span>
-                    <span class="form__label--required">
-                        ※
-                    </span>
+                    <span class="form__label--item">お問い合わせ内容</span>
+                    <span class="form__label--required">※</span>
                 </div>
                 <div class="form__group-content">
-                    <textarea class="form__text-detail" name="detail" placeholder="お問い合わせ内容をご記載ください" >{{ old('detail') }}</textarea>
+                    <textarea class="form__text-detail" name="detail" placeholder="お問い合わせ内容をご記載ください">{{ old('detail') }}</textarea>
                     <div class="form__error">
                         @error('detail')
                             {{ $message }}

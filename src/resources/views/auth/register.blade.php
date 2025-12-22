@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/register.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 @endsection
 
 @section('content')
@@ -11,16 +11,16 @@
                 <h2 class="register-form__header-title">Register</h2>
             </div>
             <form class="form" action="{{ route('register') }}" method="post" novalidate>
-            @csrf
+                @csrf
                 <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">お名前</span>
                     </div>
                     <div class="form__group-content">
-                        <input class="form__input" type="text" name="name" value="{{ old('name') }}" placeholder="例:山田　太郎"/>
+                        <input class="form__input" type="text" name="name" value="{{ old('name') }}" placeholder="例:山田　太郎">
                         <div class="form__error">
                             @error('name')
-                            {{ $message }}
+                                {{ $message }}
                             @enderror
                         </div>
                     </div>
@@ -30,10 +30,10 @@
                         <span class="form__label--item">メールアドレス</span>
                     </div>
                     <div class="form__group-content">
-                        <input class="form__input" type="email" name="email" value="{{ old('email') }}" placeholder="例:test@example.com"/>
+                        <input class="form__input" type="email" name="email" value="{{ old('email') }}" placeholder="例:test@example.com">
                         <div class="form__error">
                             @error('email')
-                            {{ $message }}
+                                {{ $message }}
                             @enderror
                         </div>
                     </div>
@@ -43,10 +43,10 @@
                         <span class="form__label--item">パスワード</span>
                     </div>
                     <div class="form__group-content">
-                        <input class="form__input" type="password" name="password" placeholder="例:coachtech1106"/>
+                        <input class="form__input" type="password" name="password" placeholder="例:coachtech1106">
                         <div class="form__error">
                             @error('password')
-                            {{ $message }}
+                                {{ $message }}
                             @enderror
                         </div>
                     </div>
